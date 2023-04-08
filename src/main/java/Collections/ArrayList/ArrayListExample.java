@@ -8,7 +8,7 @@ public class ArrayListExample {
         ArrayList<String> example1 = new ArrayList<>();
         example1.add("something1");
         example1.add("something2");
-        System.out.println(example1 + "\n_______________________________________________________________");
+        System.out.println(example1 + "\n____________________________________________________________________________");
 
         ArrayList<String> example2 = new ArrayList<>(); // Тип (generic) достаточно писать только слева
         example2.add("something2.1");
