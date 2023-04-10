@@ -5,6 +5,8 @@ import java.util.Objects;
 
 public class ArrayListExample {
     public static void main(String[] args) {
+        // Так как ArrayList реализует интерфейс List, то у него должны быть все методы List плюс (возможно) какие-то другие.
+        // Отсюда внешняя схожесть. При этом в List эти методы вообще никак не реализованы и невозможно создать объект командой new List().
         ArrayList<String> example1 = new ArrayList<>();
         example1.add("something1");
         example1.add("something2");
@@ -72,6 +74,18 @@ public class ArrayListExample {
         example5.add(1, studentKitty); // Вернули
         example5.removeIf(s -> s.equals(studentKittyNotInArrayButEquals)); // После удаления этого нового студента таким способом, удалились все равные ему студенты.
         printStudentsArray(example5);
+        System.out.println("_________________________________________________________________________________________");
+
+        ArrayList<Student> example6 = new ArrayList<>();
+        Student studentJeka = new Student("Jeka", 'M',18,4.55);
+        example6.add(studentJeka);
+        example6.add(studentKitty);
+        example6.addAll(1, example5);
+        if(example6.contains(studentKirill)) {
+            printStudentsArray(example6);
+            System.out.println("index of studentKitty = " + example6.indexOf(studentKittyNotInArrayButEquals)); // studentKittyNotInArrayButEquals не в example6, но из-за переопределенного метода equals
+            // studentKittyNotInArrayButEquals == studentKitty, выводится индекс studentKitty
+        }
         System.out.println("_________________________________________________________________________________________");
     }
 
