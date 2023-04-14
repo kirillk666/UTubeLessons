@@ -1,6 +1,7 @@
 package Collections.ArrayList;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class ArrayListExample {
@@ -87,6 +88,66 @@ public class ArrayListExample {
             // studentKittyNotInArrayButEquals == studentKitty, выводится индекс studentKitty
         }
         System.out.println("_________________________________________________________________________________________");
+
+        //Некоторые общие методы класса Collections
+        ArrayList<String> example7 = new ArrayList<>();
+        example7.add("One");
+        example7.add("Two");
+        example7.add("Three");
+        example7.add("Four");
+        example7.add("Five");
+        example7.add("Six");
+
+        ArrayList<String> example8 = new ArrayList<>();
+        example8.add("One");
+        example8.add("Two");
+        example8.add("Three");
+
+        example7.removeAll(example8);
+        printArray(example7);
+        System.out.println();
+
+        example7.addAll(0, example8);
+        printArray(example7);
+        System.out.println();
+
+        example7.retainAll(example8); // Оставит в example7 только те элементы, что есть в example8
+        printArray(example7);
+        System.out.println();
+
+        if (example7.containsAll(example8)) {
+            System.out.println("example7 содержит все элементы example8");
+        }
+        System.out.println("_________________________________________________________________________________________");
+
+        ArrayList<String> example9 = new ArrayList<>();
+        example9.add("One");
+        example9.add("Two");
+        example9.add("Three");
+        example9.add("Four");
+        example9.add("Five");
+        example9.add("Six");
+
+        // Создание subList из ArrayList example9. Диапазон указывается не включительно, т.е. 0 - 4 только 3 элемента. Как в subString.
+        // subList не существует по отдельности от example9, он лишь является его представлением (view).
+        List<String> subList = example9.subList(0, 4);
+        System.out.println(subList);
+
+        example9.set(0, "OneOne");
+        System.out.println(subList);
+
+        subList.add("Seven");
+        System.out.println("subList = " + subList + ", example9 = " + example9);
+
+        subList.remove(2);
+        System.out.println("subList = " + subList + ", example9 = " + example9);
+
+        //Если добавить элемент в диапазоне example9, выбранном для создания view subList и дальше как-то пытаться взаимодействовать с subList,
+        // то получим ConcurrentModificationException
+        example9.add(0, "Zero");
+        // System.out.println("subList = " + subList + ", example9 = " + example9); - Exception
+        // При этом вывод просто example9 работает
+        System.out.println(example9 + " = example9");
     }
 
     public static class Student {
