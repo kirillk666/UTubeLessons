@@ -1,4 +1,4 @@
-package Collections.ArrayList;
+package Collections;
 
 import java.util.LinkedList;
 
@@ -7,7 +7,6 @@ public class LinkedListExample {
         Student studentKirill = new Student("Kirill", 'M', 28, 4.23);
         Student studentKatya = new Student("Katya", 'F', 29, 3.23);
         Student studentDesdemona = new Student("Desdemona", 'F', 15, 3.23);
-        Student studentKitty = new Student("Kitty", 'F', 25, 4.33);
 
         LinkedList<Student> studentsLinkedList = new LinkedList<>();
         studentsLinkedList.add(studentKirill);

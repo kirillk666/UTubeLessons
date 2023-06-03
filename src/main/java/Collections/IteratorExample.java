@@ -1,4 +1,4 @@
-package Collections.ArrayList;
+package Collections;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,6 +12,7 @@ public class IteratorExample {
         arrayForIteratorExample.add("example4");
 
         Iterator<String> iterator = arrayForIteratorExample.iterator();
+        //noinspection WhileLoopReplaceableByForEach
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }

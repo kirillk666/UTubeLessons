@@ -1,8 +1,7 @@
-package Collections.ArrayList;
+package Collections;
 
 import java.util.ArrayList;
 import java.util.List;
-import static Collections.ArrayList.Student.printStudentsArray;
 
 public class ArrayListExample {
     public static void main(String[] args) {
@@ -30,6 +29,7 @@ public class ArrayListExample {
         System.out.println("_________________________________________________________________________________________");
 
         ArrayList<String> example4 = new ArrayList<>(example1); // Задали ссылку на arrayList example1, т.е. взяли за основу example1
+        //noinspection NewObjectEquality
         System.out.println(example4 == example1); // example1 и example4 - это разные объекты класса String. Через == сравнивается ссылка на объект, а не содержимое.
         System.out.println(example4.equals(example1)); // С одинаковым содержимым. Их корректно сравнить через equals, т.к. String неизменяемый
         example4.add("something4.1");
@@ -60,23 +60,23 @@ public class ArrayListExample {
         System.out.println("Сравнение одинаковых объектов: " + studentKitty.equals(studentKitty_2)); // false без @override equals сравнивает ссылки (выполняется ==), true - c @override
         System.out.println("Сравнение одинаковых элементов массива: " + example5.get(1).equals(example5.get(2))); // false без @override equals, true - c @override
 
-        printStudentsArray(example5);
+        Student.printStudentsArray(example5);
         System.out.println("_________________________________________________________________________________________");
 
         example5.remove(studentKitty); // Тут удаляется первое вхождение элемента studentKitty в example5, студент studentKitty_2 не был удален, т.к. до него не дошли.
-        printStudentsArray(example5);
+        Student.printStudentsArray(example5);
         System.out.println("_________________________________________________________________________________________");
 
         example5.add(1, studentKitty); // Вернули
         Student studentKittyNotInArrayButEquals =  new Student("Kitty", 'F', 25, 4.33); // Новый студент, которого нет в example5,
         // но который, благодаря переопределенному в классе student методу equals класса Object, равен studentKitty
         example5.remove(studentKittyNotInArrayButEquals); // Аналогично удаляется первое вхождение элемента studentKitty в example5, студент studentKitty_2 не был удален, т.к. до него не дошли.
-        printStudentsArray(example5);
+        Student.printStudentsArray(example5);
         System.out.println("_________________________________________________________________________________________");
 
         example5.add(1, studentKitty); // Вернули
         example5.removeIf(s -> s.equals(studentKittyNotInArrayButEquals)); // После удаления этого нового студента таким способом, удалились все равные ему студенты.
-        printStudentsArray(example5);
+        Student.printStudentsArray(example5);
         System.out.println("_________________________________________________________________________________________");
 
         ArrayList<Student> example6 = new ArrayList<>();
@@ -85,7 +85,7 @@ public class ArrayListExample {
         example6.add(studentKitty);
         example6.addAll(1, example5);
         if(example6.contains(studentKirill)) {
-            printStudentsArray(example6);
+            Student.printStudentsArray(example6);
             System.out.println("index of studentKitty = " + example6.indexOf(studentKittyNotInArrayButEquals)); // studentKittyNotInArrayButEquals не в example6, но из-за переопределенного метода equals
             // studentKittyNotInArrayButEquals == studentKitty, выводится индекс studentKitty
         }
