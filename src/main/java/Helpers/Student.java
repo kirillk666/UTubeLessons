@@ -4,15 +4,47 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Student {
-    String name;
-    Character sex;
-    Integer age;
-    Double averageGrade;
+    private String name;
+    private Character sex;
+    private Integer age;
+    private Double averageGrade;
     public Student(String name, char sex, int age, Double avaragrGrade){
         this.name = name;
         this.age = age;
         this.sex = sex;
         this.averageGrade = avaragrGrade;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Character getSex() {
+        return sex;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public Double getAverageGrade() {
+        return averageGrade;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSex(Character sex) {
+        this.sex = sex;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public void setAverageGrade(Double averageGrade) {
+        this.averageGrade = averageGrade;
     }
 
     @Override
@@ -38,6 +70,12 @@ public class Student {
         return Objects.hash(name, sex, age, averageGrade);
     }
 
+    /*     Wrong override for example in EqualsAndHashCode.java
+    @Override
+    public int hashCode() {
+        return (name.length() + age);
+    }
+    */
 
     public static void printStudentsArray(ArrayList<Student> arraylist) {
         for(Student s : arraylist) {
