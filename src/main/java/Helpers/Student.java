@@ -3,16 +3,22 @@ package Helpers;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private Character sex;
     private Integer age;
     private Double averageGrade;
-    public Student(String name, char sex, int age, Double avaragrGrade){
+    public Student(String name, char sex, int age, Double averageGrade){
         this.name = name;
         this.age = age;
         this.sex = sex;
-        this.averageGrade = avaragrGrade;
+        this.averageGrade = averageGrade;
+    }
+
+    public Student(String name, char sex, int age){
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
     }
 
     public String getName() {
@@ -76,6 +82,17 @@ public class Student {
         return (name.length() + age);
     }
     */
+
+    @Override
+    public int compareTo(Student o) {
+        int result;
+        if(averageGrade != null) {
+            result = this.averageGrade.compareTo(o.getAverageGrade());
+        } else {
+            result = this.age.compareTo(o.age);
+        }
+        return result;
+    }
 
     public static void printStudentsArray(ArrayList<Student> arraylist) {
         for(Student s : arraylist) {

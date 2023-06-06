@@ -1,4 +1,4 @@
-package Lessons.Normal.Map;
+package Lessons.Normal.Collection.Map;
 
 import Helpers.Student;
 
@@ -10,7 +10,7 @@ public class HashMap {
         /** HashMap
          * Элементами HashMap являются пары Key Value;
          * HashMap не запоминает порядок добавления элементов;
-         * Методы работают очень быстро;
+         * Методы работают очень быстро O(1);
          * Key должен быть уникален, может быть null;
          * Value могут повторяться, могут быть null;
          * HashMap - not synchronised, ее не нужно использовать в многопоточном программировании
