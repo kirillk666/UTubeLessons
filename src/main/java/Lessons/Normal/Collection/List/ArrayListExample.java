@@ -2,40 +2,43 @@ package Lessons.Normal.Collection.List;
 
 import Helpers.Student;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayList {
+public class ArrayListExample {
     public static void main(String[] args) {
-        /**
+
+        /** class ArrayList - реализует(implements) интерфейс List, который в свою очередь реализует(implements) интерфейс Collection;
          * Т.к. ArrayList реализует интерфейс List, то у него должны быть все методы List плюс (возможно) какие-то другие.
          * Отсюда внешняя схожесть. При этом в List эти методы вообще никак не реализованы и невозможно создать объект командой new List().
         **/
-        java.util.ArrayList<String> example1 = new java.util.ArrayList<>();
+
+        ArrayList<String> example1 = new ArrayList<>();
         example1.add("something1");
         example1.add("something2");
         System.out.println(example1 + "\n____________________________________________________________________________");
 
-        java.util.ArrayList<String> example2 = new java.util.ArrayList<>(); // Тип (generic) достаточно писать только слева
+        ArrayList<String> example2 = new ArrayList<>(); // Тип (generic) достаточно писать только слева
         example2.add("something2.1");
         example2.add("something2.2");
-        ArrayList.printArray(example2);
+        ArrayListExample.printArray(example2);
         System.out.println("_________________________________________________________________________________________");
 
-        java.util.ArrayList<String> example3 = new java.util.ArrayList<>(25); // Был массив без изначальной размерности
+        ArrayList<String> example3 = new ArrayList<>(25); // Был массив без изначальной размерности
         example3.add("something3.1"); // Добавили something1 => массив стал размером 1 с элементом 1.
         example3.add("something3.2"); // Добавили something2 => скопировали элементы массива (в данном случае something1) и добавили новый элемент something2
         // Таким образом, при добавлении нового элемента копируется полностью старый массив и добавляется новый элемент.
         // Если изначально задать initial Capacity, то копирования не будет и заполнение будет происходить быстрее
-        ArrayList.printArray(example3);
+        ArrayListExample.printArray(example3);
         System.out.println("_________________________________________________________________________________________");
 
-        java.util.ArrayList<String> example4 = new java.util.ArrayList<>(example1); // Задали ссылку на arrayList example1, т.е. взяли за основу example1
+        ArrayList<String> example4 = new ArrayList<>(example1); // Задали ссылку на arrayList example1, т.е. взяли за основу example1
         //noinspection NewObjectEquality
         System.out.println(example4 == example1); // example1 и example4 - это разные объекты класса String. Через == сравнивается ссылка на объект, а не содержимое.
         System.out.println(example4.equals(example1)); // С одинаковым содержимым. Их корректно сравнить через equals, т.к. String неизменяемый
         example4.add("something4.1");
         example4.add("something4.2");
-        ArrayList.printArray(example4);
+        ArrayListExample.printArray(example4);
         System.out.println("_________________________________________________________________________________________");
 
         Student studentKirill = new Student("Kirill", 'M', 28, 4.23);
@@ -45,7 +48,7 @@ public class ArrayList {
         Student studentKitty_2 = new Student("Kitty", 'F', 25, 4.33);
         Student studentGena = new Student("Gena", 'M', 28, 2.53);
         Student studentGenaWasCloned = new Student("GenaWasCloned", 'M', 28, 2.53);
-        java.util.ArrayList<Student> example5 = new java.util.ArrayList<>();
+        ArrayList<Student> example5 = new ArrayList<>();
 
         example5.add(studentKatya);
         example5.add(studentKitty);
@@ -80,7 +83,7 @@ public class ArrayList {
         Student.printStudentsArray(example5);
         System.out.println("_________________________________________________________________________________________");
 
-        java.util.ArrayList<Student> example6 = new java.util.ArrayList<>();
+        ArrayList<Student> example6 = new ArrayList<>();
         Student studentJeka = new Student("Jeka", 'M',18,4.55);
         example6.add(studentJeka);
         example6.add(studentKitty);
@@ -93,7 +96,7 @@ public class ArrayList {
         System.out.println("_________________________________________________________________________________________");
 
         //Некоторые общие методы класса Collections
-        java.util.ArrayList<String> example7 = new java.util.ArrayList<>();
+        ArrayList<String> example7 = new ArrayList<>();
         example7.add("One");
         example7.add("Two");
         example7.add("Three");
@@ -101,7 +104,7 @@ public class ArrayList {
         example7.add("Five");
         example7.add("Six");
 
-        java.util.ArrayList<String> example8 = new java.util.ArrayList<>();
+        ArrayList<String> example8 = new ArrayList<>();
         example8.add("One");
         example8.add("Two");
         example8.add("Three");
@@ -123,7 +126,7 @@ public class ArrayList {
         }
         System.out.println("_________________________________________________________________________________________");
 
-        java.util.ArrayList<String> example9 = new java.util.ArrayList<>();
+        ArrayList<String> example9 = new ArrayList<>();
         example9.add("One");
         example9.add("Two");
         example9.add("Three");

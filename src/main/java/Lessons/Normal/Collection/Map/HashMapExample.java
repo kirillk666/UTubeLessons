@@ -2,21 +2,23 @@ package Lessons.Normal.Collection.Map;
 
 import Helpers.Student;
 
+import java.util.HashMap;
 import java.util.Map;
 
-public class HashMap {
+public class HashMapExample {
     public static void main(String[] args) {
 
-        /** HashMap
+        /** class HashMap реализует(implements) Map. Map в отличие от других интерфейсов коллекций не наследуется от интерфейса Collection;
          * Элементами HashMap являются пары Key Value;
-         * HashMap не запоминает порядок добавления элементов;
+         * Важно переопределять метод equals и hashcode для Key, если это самописные объекты;
+         * HashMap не запоминает порядок добавления элементов, порядок формируется по hashCode;
          * Методы работают очень быстро O(1);
          * Key должен быть уникален, может быть null;
          * Value могут повторяться, могут быть null;
-         * HashMap - not synchronised, ее не нужно использовать в многопоточном программировании
+         * HashMap - not synchronised, не нужно использовать в многопоточном программировании;
          */
 
-        Map<Integer, String> map1 = new java.util.HashMap<>();
+        HashMap<Integer, String> map1 = new HashMap<>();
         map1.put(1000, "Igor Ivanov");
         map1.put(1412, "Denis Ivanov");
         map1.put(3245, "Semen Ivanov");
@@ -30,29 +32,29 @@ public class HashMap {
         map1.put(666, null);
         map1.put(null, null); // Перезаписал пару map1.put(null, "Key Null");
 
-        map1.putIfAbsent(1000, "Igor Ivanov2"); //Добавляет, если пары с таким Key нет
+        map1.putIfAbsent(1000, "Igor Ivanov2"); //Добавляет, если пары с таким Key еще нет
 
-        System.out.println(map1);
+        System.out.println("\n" + map1);
         System.out.println("_________________________________________________________________________________________");
 
 
-        System.out.println(map1.get(1000)); // Получить значение по ключу
+        System.out.println("Получить значение по ключу 1000 = " + map1.get(1000));
         System.out.println("_________________________________________________________________________________________");
 
 
-        map1.remove(6353);
+        System.out.println("Элемент с Key 6353 удален = " +  map1.remove(6353));
         System.out.println(map1);
         System.out.println("_________________________________________________________________________________________");
 
         if(map1.containsKey(1000) && map1.containsValue("Arina Vlasova")) {
-            System.out.println("Содержит");
+            System.out.println("HashMap map1 содержит Key = 1000 и содержит Value = Arina Vlasova");
         } else {
             System.out.println("Не содержит");
         }
         System.out.println("_________________________________________________________________________________________");
 
-        System.out.println(map1.keySet()); // Выводит множество keys
-        System.out.println(map1.values()); // Выводит множество values
+        System.out.println("Множество Key HashMap map1: " + map1.keySet());
+        System.out.println("Множество Value HashMap map1: " + map1.values());
         System.out.println("_________________________________________________________________________________________");
 
         //Для простоты понимания, в основе hashMap лежит массив, элементами массива являются структуры LinkedList, которые заполняются элементами, которые мы добавляем в hashMap.
@@ -68,7 +70,7 @@ public class HashMap {
         //При создании HashMap можно задать 2 параметра, которые сильно влияют на производительность.
         //Initial capacity
         //Load factor - коэффициент того, насколько массив должен быть заполнен, после чего его размер будет увеличен вдвое
-        Map<Student, Integer> studentsMarksForPoetry = new java.util.HashMap<>(16, 0.75F); //16 * 0.75 = 12, т.е. после того, как массив будет заполнен на 12 элементов,
+        HashMap<Student, Integer> studentsMarksForPoetry = new HashMap<>(16, 0.75F); //16 * 0.75 = 12, т.е. после того, как массив будет заполнен на 12 элементов,
         // емкость будет увеличена вдвое, и все элементы будут перехешированы заново.
         Student studentKirill = new Student("Kirill", 'M', 28, 4.23);
         Student studentKatya = new Student("Katya", 'F', 29, 3.23);
@@ -80,8 +82,8 @@ public class HashMap {
 
         //Рекомендуется, чтобы Key был неизменяемый(immutable), т.е. если речь идет об объекте, то все его поля должны быть final
         //Иначе, объект может измениться, следовательно, изменится его hashCode, а следовательно, ключа с таким hashCode уже не будет в hashMap
-        System.out.println("Содержит: " + studentsMarksForPoetry.containsKey(studentKatya));
+        System.out.println("HashMap studentsMarksForPoetry содержит Key = studentKatya: " + studentsMarksForPoetry.containsKey(studentKatya));
         studentKatya.setAge(30);
-        System.out.println("Содержит: " + studentsMarksForPoetry.containsKey(studentKatya));
+        System.out.println("HashMap studentsMarksForPoetry содержит Key = studentKatya: " + studentsMarksForPoetry.containsKey(studentKatya));
     }
 }

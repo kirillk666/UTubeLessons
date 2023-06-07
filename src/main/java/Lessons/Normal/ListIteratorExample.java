@@ -1,12 +1,15 @@
 package Lessons.Normal;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
-public class ListIterator {
+public class ListIteratorExample {
     public static void main(String[] args) {
-        /**
+
+        /** interface ListIterator - наследует/расширяет(extends) Iterator;
          * В отличие от iterator есть возможность двигаться в обратном направлении.
          */
+
         //Проверяем, является ли строка палиндромом (читается одинаково в обе стороны)
         String palindrome = "madam";
         LinkedList<Character> linkedList = new LinkedList<>();
@@ -15,8 +18,8 @@ public class ListIterator {
            linkedList.add(ch);
         }
 
-        java.util.ListIterator<Character> listIterator = linkedList.listIterator();
-        java.util.ListIterator<Character> reverseListIterator = linkedList.listIterator(linkedList.size());
+        ListIterator<Character> listIterator = linkedList.listIterator();
+        ListIterator<Character> reverseListIterator = linkedList.listIterator(linkedList.size());
         boolean isPalindrome = true;
         while(listIterator.hasNext() && reverseListIterator.hasPrevious()) {
             if(listIterator.next() != reverseListIterator.previous()) {

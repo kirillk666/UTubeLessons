@@ -1,8 +1,12 @@
 package Lessons.Normal;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Iterator {
+public class IteratorExample {
+
+    /** interface Iterator - member of the Java Collections Framework
+     */
     public static void main(String[] args) {
         ArrayList<String> arrayForIteratorExample = new ArrayList<>();
         arrayForIteratorExample.add("example1");
@@ -10,16 +14,16 @@ public class Iterator {
         arrayForIteratorExample.add("example3");
         arrayForIteratorExample.add("example4");
 
-        java.util.Iterator<String> iterator = arrayForIteratorExample.iterator();
+        Iterator<String> iterator = arrayForIteratorExample.iterator();
         //noinspection WhileLoopReplaceableByForEach
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
         System.out.println("_________________________________________________________________________________________");
 
-        java.util.Iterator<String> iterator2 = arrayForIteratorExample.iterator();
+        Iterator<String> iterator2 = arrayForIteratorExample.iterator();
         while (iterator2.hasNext()) {
-            iterator2.next(); // Если не выполнить эту строку, то на строке удаление будет исключение
+            iterator2.next(); // Если не выполнить эту строку, то на строке удаления будет исключение
             System.out.println(arrayForIteratorExample);
             iterator2.remove();
         }

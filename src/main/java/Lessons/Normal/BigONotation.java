@@ -7,6 +7,7 @@ import java.util.List;
 
 public class BigONotation {
     public static void main(String[] args) {
+
         /** Big O Notation
          * Служит для описания сложности алгоритмов. За какое время выполняются алгоритмы.
          * Сложность алгоритма описывается через кол-во операций, нужных для достижения р-та.

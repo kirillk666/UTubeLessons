@@ -2,20 +2,12 @@ package Lessons.Normal.Collection.List;
 
 import Helpers.Student;
 
-public class LinkedList {
+import java.util.LinkedList;
+
+public class LinkedListExample {
     public static void main(String[] args) {
-        Student studentKirill = new Student("Kirill", 'M', 28, 4.23);
-        Student studentKatya = new Student("Katya", 'F', 29, 3.23);
-        Student studentDesdemona = new Student("Desdemona", 'F', 15, 3.23);
 
-        java.util.LinkedList<Student> studentsLinkedList = new java.util.LinkedList<>();
-        studentsLinkedList.add(studentKirill);
-        studentsLinkedList.add(studentKatya);
-        studentsLinkedList.add(studentDesdemona);
-
-        System.out.println(studentsLinkedList);
-
-        /** LinkedList
+        /** class LinkedList - реализует(implements) интерфейс List, который в свою очередь реализует(implements) интерфейс Collection;
          * Все элементы хранят в себе данные и ссылки на предыдущий и последующий элемент цепочки.
          * В основе лежит не массив, а цепочка. Последний и первый элементы ссылаются на null.
          * Когда идет обращение к элементу цепочки .get(5), то идет последовательный опрос всех элементов, пока не дойдем до 5-го, т.е. по цепочке.
@@ -29,7 +21,17 @@ public class LinkedList {
          В array list:
          * При добавлении элемента с индексом 5 создается новый массив на 5 элементов и туда кладутся 4 других элемента, далее добавляется пятый
          * При удалении/добавлении элементов элементы сдвигаются, чем больше элементов, тем больше выполняется действий
-        */
+         */
 
+        Student studentKirill = new Student("Kirill", 'M', 28, 4.23);
+        Student studentKatya = new Student("Katya", 'F', 29, 3.23);
+        Student studentDesdemona = new Student("Desdemona", 'F', 15, 3.23);
+
+        LinkedList<Student> studentsLinkedList = new LinkedList<>();
+        studentsLinkedList.add(studentKirill);
+        studentsLinkedList.add(studentKatya);
+        studentsLinkedList.add(studentDesdemona);
+
+        System.out.println(studentsLinkedList);
     }
 }

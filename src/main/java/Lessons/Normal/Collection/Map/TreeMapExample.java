@@ -7,7 +7,7 @@ import java.util.TreeMap;
 public class TreeMapExample {
     public static void main(String[] args) {
 
-        /**
+        /** class TreeMap
          * В TreeMap, как и в HashMap элементами являются пары Key/Value;
          * Элементы хранятся в отсортированном виде в порядке возрастания Key;
          * Key должны быть уникальны, как и в TreeMap;
