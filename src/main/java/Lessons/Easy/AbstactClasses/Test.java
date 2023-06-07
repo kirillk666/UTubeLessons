@@ -13,6 +13,9 @@ public class Test {
         Cat cat = new Cat();
         cat.makeSound();
         cat.eat();
-        Animal a = new Cat();
+
+        Animal dog = new Dog();
+        dog.makeSound();
+        dog.eat();
     }
 }
