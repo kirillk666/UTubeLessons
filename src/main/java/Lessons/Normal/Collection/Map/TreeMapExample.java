@@ -10,7 +10,8 @@ public class TreeMapExample {
         /** class TreeMap
          * В TreeMap, как и в HashMap элементами являются пары Key/Value;
          * Элементы хранятся в отсортированном виде в порядке возрастания Key;
-         * Key должны быть уникальны, как и в TreeMap;
+         * Key должны быть уникальны;
+         * Key не может быть null, Value может быть null
          * !!! Для TreeMap не нужно переопределять методы equals и hashCode, т.к. все сравнения идут основываясь на метод
             compareTo для Key, но все равно рекомендуется переопределять;
          * В основе TreeMap лежит Red Black Tree - один из видов самобалансирующихся (перестраивается по мере добавления элементов) двоичных
@@ -35,6 +36,8 @@ public class TreeMapExample {
         doubleStudentTreeMap.put(4.55, Oksana);
         doubleStudentTreeMap.put(2.53, Gena);
         doubleStudentTreeMap.put(4.53, Ragnar);
+//      doubleStudentTreeMap.put(null, Ragnar); NPE - Key не может быть null
+        doubleStudentTreeMap.put(4.56, null); //Value может быть null
 
         System.out.println("\ndoubleStudentTreeMap = " + doubleStudentTreeMap);
         System.out.println("_________________________________________________________________________________________");
@@ -49,9 +52,11 @@ public class TreeMapExample {
         System.out.println("Элементы отсортированы в обратном порядке по Key = " + doubleStudentTreeMap.descendingMap());
         System.out.println("_________________________________________________________________________________________");
 
-        System.out.println("Вывод элементов с Key от 4.5 = " + doubleStudentTreeMap.tailMap(4.5));
+        System.out.println("Вывод элементов с Key после или РАВНЫМ 4.53 = " + doubleStudentTreeMap.tailMap(4.53));
         System.out.println("_________________________________________________________________________________________");
 
+        System.out.println("Вывод элементов с Key до 4.53 = " + doubleStudentTreeMap.headMap(4.53));
+        //Можно использовать и значения ключа, которые подходят по типу, но которых нет в treeMap.
         System.out.println("Вывод элементов с Key до 4.5 = " + doubleStudentTreeMap.headMap(4.5));
         System.out.println("_________________________________________________________________________________________");
 

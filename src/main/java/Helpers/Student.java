@@ -83,13 +83,18 @@ public class Student implements Comparable<Student>{
     }
     */
 
+    //Если переопределены методы equals/hashCode и compareTo, то эти методы должны сравнить одинаково, по всем полям.
     @Override
     public int compareTo(Student o) {
         int result;
-        if(averageGrade != null) {
+        if(averageGrade != null && !Objects.equals(this.averageGrade, o.averageGrade)) {
             result = this.averageGrade.compareTo(o.getAverageGrade());
-        } else {
+        } else if (!Objects.equals(this.age, o.age)){
             result = this.age.compareTo(o.age);
+        } else if (!Objects.equals(this.name, o.name)){
+            result = this.name.compareTo(o.name);
+        } else {
+            result = this.sex.compareTo(o.sex);
         }
         return result;
     }
