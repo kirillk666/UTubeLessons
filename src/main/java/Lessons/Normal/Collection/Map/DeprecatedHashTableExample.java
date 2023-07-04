@@ -5,7 +5,7 @@ import Helpers.Student;
 import java.util.Hashtable;
 
 @SuppressWarnings("unused")
-public class HashTableExample {
+public class DeprecatedHashTableExample {
     public static void main(String[] args) {
 
         /** HashTable - УСТАРЕВШИЙ - Deprecated; Вместо него в документации рекомендуют использовать ConcurrentHashMap;

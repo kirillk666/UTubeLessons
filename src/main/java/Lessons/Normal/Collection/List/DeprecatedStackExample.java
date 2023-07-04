@@ -5,7 +5,7 @@ import Helpers.Student;
 import java.util.Stack;
 
 @SuppressWarnings("unused")
-public class StackExample {
+public class DeprecatedStackExample {
 
     /** class Stack - УСТАРЕВШИЙ - Deprecated;
      * Наследует/расширяет(extends) Vector;
