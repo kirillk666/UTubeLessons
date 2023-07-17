@@ -7,7 +7,8 @@ import java.util.LinkedList;
 public class LinkedListExample {
     public static void main(String[] args) {
 
-        /** class LinkedList - реализует(implements) интерфейс List, который в свою очередь реализует(implements) интерфейс Collection;
+        /** class LinkedList - реализует(implements) интерфейс List, который в свою очередь реализует(implements) интерфейс Collection.
+         * Реализует(implements) интерфейс Deque, который в свою очередь реализует(implements) интерфейс Queue.
          * Все элементы хранят в себе данные и ссылки на предыдущий и последующий элемент цепочки.
          * В основе лежит не массив, а цепочка. Последний и первый элементы ссылаются на null.
          * Когда идет обращение к элементу цепочки .get(5), то идет последовательный опрос всех элементов, пока не дойдем до 5-го, т.е. по цепочке.
