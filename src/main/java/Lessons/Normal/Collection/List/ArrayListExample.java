@@ -8,7 +8,7 @@ import java.util.List;
 public class ArrayListExample {
     public static void main(String[] args) {
 
-        /** class ArrayList - реализует(implements) интерфейс List, который в свою очередь реализует(implements) интерфейс Collection;
+        /** {@link ArrayList} - реализует(implements) интерфейс {@link List}, который в свою очередь реализует(implements) интерфейс {@link java.util.Collection};
          * Т.к. ArrayList реализует интерфейс List, то у него должны быть все методы List плюс (возможно) какие-то другие.
          * Отсюда внешняя схожесть. При этом в List эти методы вообще никак не реализованы и невозможно создать объект командой new List().
         **/

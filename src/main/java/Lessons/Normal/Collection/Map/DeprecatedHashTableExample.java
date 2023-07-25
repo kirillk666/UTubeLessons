@@ -8,7 +8,7 @@ import java.util.Hashtable;
 public class DeprecatedHashTableExample {
     public static void main(String[] args) {
 
-        /** HashTable - УСТАРЕВШИЙ - Deprecated; Вместо него в документации рекомендуют использовать ConcurrentHashMap;
+        /** {@link Hashtable} - УСТАРЕВШИЙ - Deprecated; Вместо него в документации рекомендуют использовать {@link java.util.concurrent.ConcurrentHashMap};
          * Работает по тем же принципам, что и HashMap;
          * HashMap - synchronised, можно использовать в многопоточном программировании
          */

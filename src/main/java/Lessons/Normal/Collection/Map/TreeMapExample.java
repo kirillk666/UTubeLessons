@@ -7,7 +7,7 @@ import java.util.TreeMap;
 public class TreeMapExample {
     public static void main(String[] args) {
 
-        /** class TreeMap
+        /** class {@link TreeMap}
          * В TreeMap, как и в HashMap элементами являются пары Key/Value;
          * Элементы хранятся в отсортированном виде в порядке возрастания Key;
          * Key должны быть уникальны;
@@ -17,7 +17,7 @@ public class TreeMapExample {
          * В основе TreeMap лежит Red Black Tree - один из видов самобалансирующихся (перестраивается по мере добавления элементов) двоичных
             (у каждого элемента по 2 потомка, левый меньше, чем вершина, правый - больше) деревьев поиска;
          * Скорость O(logn)
-         * HashMap - not synchronised, ее не нужно использовать в многопоточном программировании
+         * TreeMap - not synchronised, ее не нужно использовать в многопоточном программировании
          */
 
         TreeMap<Double, Student> doubleStudentTreeMap = new TreeMap<>();

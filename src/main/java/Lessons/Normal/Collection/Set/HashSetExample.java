@@ -6,10 +6,10 @@ import java.util.Set;
 public class HashSetExample {
     public static void main(String[] args) {
 
-        /** class HashSet реализует(implements) интерфейс Set, который наследует/расширяет(extends) interface Collection
+        /** class {@link HashSet} реализует(implements) интерфейс {@link Set}, который наследует/расширяет(extends) interface {@link java.util.Collection}
          * Set(множество) - коллекция, хранящая уникальные элементы;
          * В основе HashSet лежит HashMap<E,Object>, где Object - какая-то константа-заглушка, которую HashSet полностью игнорирует и никогда не использует.
-            Объект <E> - ключ в HashMap;
+         Объект <E> - ключ в HashMap;
          * Методы данной коллекции очень быстрые O(1);
          * HashSet не запоминает порядок добавления элементов, порядок формируется по hashCode, как в HashMap;
          * HashSet - not synchronised, не нужно использовать в многопоточном программировании;

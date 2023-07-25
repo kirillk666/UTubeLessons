@@ -7,8 +7,8 @@ import java.util.Stack;
 @SuppressWarnings("unused")
 public class DeprecatedStackExample {
 
-    /** class Stack - УСТАРЕВШИЙ - Deprecated;
-     * Наследует/расширяет(extends) Vector;
+    /** class {@link Stack} - УСТАРЕВШИЙ - Deprecated;
+     * Наследует/расширяет(extends) {@link java.util.Vector};
      */
 
     Stack<Student> students = new Stack<>();

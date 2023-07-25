@@ -7,9 +7,9 @@ import java.util.LinkedHashMap;
 public class LinkedHashMapExample {
     public static void main(String[] args) {
 
-        /** class LinkedHashMap - наследует/расширяет(extends) HashMap, реализует(implements) Map;
+        /** class {@link LinkedHashMap} - наследует/расширяет(extends) HashMap, реализует(implements) {@link java.util.Map};
          * В отличие от HashMap, хранит информацию о порядке добавления элементов или порядке их использования
-            (каждый элемент содержит ссылки на последующий и предыдущий), из-за этого скорость выполнения методов ниже, чем у HashMap;
+         (каждый элемент содержит ссылки на последующий и предыдущий), из-за этого скорость выполнения методов ниже, чем у HashMap;
          * Важно переопределять метод equals и hashcode для Key, если это самописные объекты;
          * Возможность запоминать последовательность элементов в зависимости от их последнего использования
          */

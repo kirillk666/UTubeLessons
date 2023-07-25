@@ -7,13 +7,13 @@ import java.util.TreeSet;
 public class TreeSetExample {
     public static void main(String[] args) {
 
-        /** TreeSet - смесь HashSet и TreeMap
+        /** {@link TreeSet} - смесь {@link java.util.HashSet} и {@link java.util.TreeMap}
          * В основе TreeSet, как и в HashSet, лежит TreeMap<E,Object>, где Object - какая-то константа-заглушка,
-            которую TreeSet полностью игнорирует и никогда не использует. Объект <E> - ключ в TreeSet;
+         которую TreeSet полностью игнорирует и никогда не использует. Объект <E> - ключ в TreeSet;
          * Элементы хранятся в отсортированном виде в порядке возрастания Key;
          * Key должны быть уникальны;
          * !!! Для TreeSet, как и для TreeMap, не нужно переопределять методы equals и hashCode, т.к. все сравнения идут основываясь на метод
-            compareTo для Key, но все равно рекомендуется переопределять;
+         compareTo для Key, но все равно рекомендуется переопределять;
          * В основе TreeSet лежит Red Black Tree, как и в TreeMap;
          * null нельзя хранить, аналогично TreeMap, где Key не может быть null;
          */

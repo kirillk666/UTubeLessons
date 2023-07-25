@@ -7,7 +7,7 @@ import java.util.Vector;
 @SuppressWarnings("unused")
 public class DeprecatedVectorExample {
 
-    /** class Vector - УСТАРЕВШИЙ - Deprecated; Вместо него в документации рекомендуют использовать ArrayList;
+    /** class {@link Vector} - УСТАРЕВШИЙ - Deprecated; Вместо него в документации рекомендуют использовать ArrayList;
      * Реализует(implements) интерфейс List
      */
 

@@ -6,8 +6,8 @@ import java.util.ListIterator;
 public class ListIteratorExample {
     public static void main(String[] args) {
 
-        /** interface ListIterator - наследует/расширяет(extends) Iterator;
-         * В отличие от iterator есть возможность двигаться в обратном направлении.
+        /** interface {@link ListIterator} - наследует/расширяет(extends) {@link java.util.Iterator};
+         * В отличие от iterator, есть возможность двигаться в обратном направлении.
          */
 
         //Проверяем, является ли строка палиндромом (читается одинаково в обе стороны)

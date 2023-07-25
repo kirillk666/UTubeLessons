@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class IteratorExample {
 
-    /** interface Iterator - member of the Java Collections Framework
+    /** interface {@link Iterator} - member of the Java Collections Framework
      */
     public static void main(String[] args) {
         ArrayList<String> arrayForIteratorExample = new ArrayList<>();

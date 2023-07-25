@@ -8,7 +8,7 @@ import java.util.Map;
 public class HashMapExample {
     public static void main(String[] args) {
 
-        /** class HashMap реализует(implements) Map. Map в отличие от других интерфейсов коллекций не наследуется от интерфейса Collection;
+        /** class {@link HashMap} реализует(implements) {@link Map}. Map в отличие от других интерфейсов коллекций не наследуется от интерфейса {@link java.util.Collection};
          * Элементами HashMap являются пары Key Value;
          * Важно переопределять метод equals и hashcode для Key, если это самописные объекты;
          * HashMap не запоминает порядок добавления элементов, порядок формируется по hashCode;

@@ -10,7 +10,7 @@ import java.util.List;
 public class BinarySearchExample {
     public static void main(String[] args) {
 
-        /** binarySearch - метод класса Collections
+        /** binarySearch - метод класса {@link Collections}
          * Принцип работы binary search:
          ** Ищем символ х = 19 в отсортированном массиве;
          ** Массив делится пополам;
