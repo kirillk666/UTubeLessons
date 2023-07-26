@@ -21,9 +21,7 @@ public class Example1 {
         //В данном примере двумя потоками заполняется массив result элементами массива integers
         //Проблема этого примера в том, что результат непредсказуем, непонятно, какой поток когда закончит и будут ли они конфликтовать.
         ArrayList<Integer> result = new ArrayList<>();
-        Runnable runnable = () -> {
-            result.addAll(integers);
-        };
+        Runnable runnable = () -> result.addAll(integers);
 
         Thread thread1 = new Thread(runnable);
         Thread thread2 = new Thread(runnable);
@@ -37,9 +35,7 @@ public class Example1 {
         //В этом примере поток thread4 начнет заполнять syncResult только после того, как закончит thread3. Или наоборот. В зависимости от того,
         //какой поток сработал первым. Результат предсказуемый.
         List<Integer> syncResult = Collections.synchronizedList(new ArrayList<>()); //Synchronized view для ArrayList
-        Runnable runnableSync = () -> {
-            syncResult.addAll(integers);
-        };
+        Runnable runnableSync = () -> syncResult.addAll(integers);
 
         Thread thread3 = new Thread(runnableSync);
         Thread thread4 = new Thread(runnableSync);
