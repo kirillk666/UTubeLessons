@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Example1 {
+public class SynchronizedListExample {
 
     public static void main(String[] args) throws InterruptedException {
 
