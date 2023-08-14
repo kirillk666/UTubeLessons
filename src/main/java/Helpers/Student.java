@@ -98,10 +98,4 @@ public class Student implements Comparable<Student>{
         }
         return result;
     }
-
-    public static void printStudentsArray(ArrayList<Student> arraylist) {
-        for(Student s : arraylist) {
-            System.out.println(s);
-        }
-    }
 }

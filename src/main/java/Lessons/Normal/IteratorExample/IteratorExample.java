@@ -1,4 +1,4 @@
-package Lessons.Normal;
+package Lessons.Normal.IteratorExample;
 
 import java.util.ArrayList;
 import java.util.Iterator;
