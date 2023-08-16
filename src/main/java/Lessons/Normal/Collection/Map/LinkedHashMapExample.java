@@ -1,6 +1,6 @@
 package Lessons.Normal.Collection.Map;
 
-import Helpers.Student;
+import Helpers.Students.Student;
 
 import java.util.LinkedHashMap;
 

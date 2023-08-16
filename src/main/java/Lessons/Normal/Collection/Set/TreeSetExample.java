@@ -1,6 +1,6 @@
 package Lessons.Normal.Collection.Set;
 
-import Helpers.Student;
+import Helpers.Students.Student;
 
 import java.util.TreeSet;
 

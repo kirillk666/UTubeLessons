@@ -1,6 +1,6 @@
 package Lessons.Easy.Equals;
 
-import Helpers.Student;
+import Helpers.Students.Student;
 
 import java.util.HashMap;
 import java.util.Map;

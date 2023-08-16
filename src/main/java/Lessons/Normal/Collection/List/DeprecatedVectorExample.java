@@ -1,6 +1,6 @@
 package Lessons.Normal.Collection.List;
 
-import Helpers.Student;
+import Helpers.Students.Student;
 
 import java.util.Vector;
 

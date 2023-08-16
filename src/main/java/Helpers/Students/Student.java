@@ -1,6 +1,5 @@
-package Helpers;
+package Helpers.Students;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Student implements Comparable<Student>{

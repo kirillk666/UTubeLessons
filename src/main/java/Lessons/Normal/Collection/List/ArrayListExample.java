@@ -1,7 +1,7 @@
 package Lessons.Normal.Collection.List;
 
-import Helpers.Student;
-import Helpers.StudentHelper;
+import Helpers.Students.Student;
+import Helpers.Students.StudentHelper;
 
 import java.util.ArrayList;
 import java.util.List;

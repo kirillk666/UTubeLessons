@@ -1,4 +1,4 @@
-package Helpers;
+package Helpers.Students;
 
 import java.util.ArrayList;
 
@@ -36,6 +36,30 @@ public class StudentHelper {
             } else {
                 System.out.println(student.getName() + " doesn't match");
             }
+        }
+    }
+
+    public static void checkStudents(ArrayList<Student> students, StudentChecks checks) {
+        for (Student student : students) {
+            if (checks.check(student)) {
+                System.out.println(student);
+            } else {
+                System.out.println(student.getName() + " doesn't match");
+            }
+        }
+    }
+
+    public static class CheckStudentsUnderAge implements StudentChecks {
+        @Override
+        public boolean check(Student student) {
+            return student.getAge() < 25;
+        }
+    }
+
+    public static class CheckStudentsOverGrade implements StudentChecks {
+        @Override
+        public boolean check(Student student) {
+            return student.getAverageGrade() > 4.00;
         }
     }
 }
