@@ -13,6 +13,11 @@ public class WhatReplacesLambda {
          * Позволяет использовать функциональное программирование, в то время как java - ООП.
          * Позволяет использовать метод в кач-ве параметра.
          * Можно использовать только с функциональным интерфейсом, т.е. который содержит только 1 абстрактный метод.
+         * В лямбде -> разделяет параметры метода и тело метода, которое было бы у метода соответствующего класса,
+         имплементировавшего функциональный интерфейс.
+         * Если в абстрактном методе более одного параметра, то их нужно всегда брать в скобки
+         * Лямбду можно присвоить в переменную.
+         * Про видимость переменных внутри и вне лямбды см. в AnotherLambdaExample.java
          */
 
         Student Kirill = new Student("Kirill", 'M', 28, 4.23);
@@ -61,23 +66,49 @@ public class WhatReplacesLambda {
         System.out.println("_________________________________________________________________________________________");
 
         //4
-        System.out.println("Lambda: ");
+        System.out.println("Lambda expression полный вариант написания: ");
         //На вход метода checkStudents(ArrayList<Student> students, StudentChecks checks) java ожидает
         //коллекцию студентов первым аргументом, а вторым - объект, который имплементирует интерфейс StudentChecks.
         //Поскольку интерфейс имеет только 1 абстрактный метод check (является функциональным интерфейсом),
         //можно использовать лямбда выражения.
         //Этот метод получает на вход объект класса student и проверяет соответствие boolean условию.
         //Таким образом в метод мы передаем коллекцию студентов первым аргументом, а вторым передаем входные
-        //аргументы для метода check, далее ставим -> {и переопределяем метод check как нам надо}
-        StudentHelper.checkStudents(students, (Student student) -> {return student.getAge() < 25;});
+        //аргументы для метода check интерфейса StudentChecks (т.е. student), далее ставим -> {и переопределяем метод check как нам надо}
+        StudentHelper.checkStudents(students, (Student student) -> {
+            return student.getAge() < 25;
+        });
         System.out.println("_________________________________________________________________________________________");
 
         //5
-        System.out.println("Lambda expression записан еще проще: ");
-        StudentHelper.checkStudents(students, (Student student) -> student.getAge() < 25);
+        System.out.println("Lambda expression короткий вариант написания: ");
+        StudentHelper.checkStudents(students, student -> student.getAge() < 25);
         System.out.println("_________________________________________________________________________________________");
-        StudentHelper.checkStudents(students, (Student student) -> student.getAverageGrade() > 4.00);
+        StudentHelper.checkStudents(students, student -> student.getAverageGrade() > 4.00);
         System.out.println("_________________________________________________________________________________________");
-        StudentHelper.checkStudents(students, (Student student) -> student.getAverageGrade() >= 4.00 && student.getAge() < 25 && student.getSex() == 'F');
+        StudentHelper.checkStudents(students, student -> student.getAverageGrade() >= 4.00 && student.getAge() < 25 && student.getSex() == 'F');
+
+        /**
+         *  Если в теле метода нужно написать более одного statement, то используется только длинная форма записи
+         */
+
+        System.out.println("_________________________________________________________________________________________");
+        StudentHelper.checkStudents(students, student -> {
+            System.out.println("More than 1 statement");
+            return student.getAverageGrade() > 4;
+        });
+        System.out.println("_________________________________________________________________________________________");
+
+
+        //Если в абстрактном методе более одного параметра, то их нужно всегда брать в скобки
+        StudentHelper.checkStudentsWithComment(students, (student, string) -> {
+            string.delete(0, string.length());
+            string.append(" старше 20 лет");
+            return student.getAge() > 20;
+        });
+        System.out.println("_________________________________________________________________________________________");
+
+        //Лямбду можно присвоить в переменную
+        StudentChecks checkAge = student -> student.getAge() < 25;
+        StudentHelper.checkStudents(students, checkAge);
     }
 }

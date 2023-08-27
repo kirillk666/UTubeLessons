@@ -49,6 +49,17 @@ public class StudentHelper {
         }
     }
 
+    public static void checkStudentsWithComment(ArrayList<Student> students, StudentChecksWithTwoParameters checks) {
+        StringBuilder comment = new StringBuilder();
+        for (Student student : students) {
+            if (checks.checkWithTwoParameters(student, comment)) {
+                System.out.println(student + " " + comment);
+            } else {
+                System.out.println(student.getName() + " doesn't match");
+            }
+        }
+    }
+
     public static class CheckStudentsUnderAge implements StudentChecks {
         @Override
         public boolean check(Student student) {

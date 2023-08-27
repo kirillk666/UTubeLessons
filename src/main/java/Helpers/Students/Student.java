@@ -82,7 +82,7 @@ public class Student implements Comparable<Student>{
     }
     */
 
-    //Если переопределены методы equals/hashCode и compareTo, то эти методы должны сравнить одинаково, по всем полям.
+    //Если переопределены методы equals/hashCode и compareTo, то эти методы должны сравнивать одинаково, по всем полям.
     @Override
     public int compareTo(Student o) {
         int result;
