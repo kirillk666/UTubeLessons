@@ -1,5 +1,7 @@
 package Lessons.Normal.Lambda;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class AnotherLambdaExample {
 
     interface I {
@@ -42,11 +44,16 @@ public class AnotherLambdaExample {
          * Нельзя задать переменную int i = 3, использовать ее в лямбде, а потом изменить i = 4.
          Даже если задать переменную int i = 3, изменить i = 4, использовать в лямбде - будет такая же ошибка. Так делать нельзя.
          Поэтому используем константы для таких целей.
-         Если хотим, чтобы была возможность изменять значение i, то тогда создаем сразу как
+         Если хотим, чтобы была возможность изменять значение i, то тогда создаем сразу как effectively final.
          */
         final int HELL_CONST = 663;
         printABC(s -> s.length() + HELL_CONST);
 
+        int i = 1;
+        int finalI = i;
+        printABC(s -> s.length() + finalI);
+        i = 2;
+        System.out.println(i);
 
     }
 

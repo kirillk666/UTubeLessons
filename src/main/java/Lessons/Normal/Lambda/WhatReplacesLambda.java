@@ -5,6 +5,8 @@ import Helpers.Students.StudentChecks;
 import Helpers.Students.StudentHelper;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
 
 public class WhatReplacesLambda {
     public static void main(String[] args) {
@@ -110,5 +112,16 @@ public class WhatReplacesLambda {
         //Лямбду можно присвоить в переменную
         StudentChecks checkAge = student -> student.getAge() < 25;
         StudentHelper.checkStudents(students, checkAge);
+        System.out.println("_________________________________________________________________________________________");
+
+        //Пример переопределения компаратора для объектов Student
+        Collections.sort(students, (student1, student2) -> {
+            if(!Objects.equals(student1.getAge(), student2.getAge())) {
+                return student1.getAge() - student2.getAge();
+            } else {
+                return student1.getName().compareTo(student2.getName());
+            }
+        });
+        System.out.println(students);
     }
 }
