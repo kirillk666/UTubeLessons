@@ -3,13 +3,13 @@ package Lessons.Normal.Stream;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class StreamExample {
+public class StreamMethods {
     public static void main(String[] args) {
 
         /** Interface {@link java.util.stream.Stream}
          * Последовательность элементов, поддерживающая параллельные и последовательные операции.
          * Позволяют писать код в функциональном стиле.
-         *
+         * Методы stream, map и т.д. не меняют массив или коллекцию, на которой они были вызваны.
          */
 
         List<String> strings = new ArrayList<>();
@@ -26,7 +26,6 @@ public class StreamExample {
         //Преобразуем массив в поток значений, над которым производим какие-то действия, описанные с помощью лямбды в методе map,
         //поэлементно и результат присваивается значению.
         //Чтобы записать полученный результат в массив, нужно использовать метод collect.
-        //Методы stream, map и т.д. не меняют массив или коллекцию, на которой они были вызваны.
         List<Integer> integers = strings.stream().map(element -> element.length()).collect(Collectors.toList());
         System.out.println(integers);
         System.out.println("_________________________________________________________________________________________");
