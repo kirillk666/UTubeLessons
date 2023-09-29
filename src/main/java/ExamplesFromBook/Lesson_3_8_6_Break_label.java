@@ -1,8 +1,5 @@
 package ExamplesFromBook;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class Lesson_3_8_6_Break_label {
     public static void main(String[] args) {
 
