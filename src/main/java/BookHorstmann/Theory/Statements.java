@@ -54,6 +54,7 @@ public class Statements {
         /** {@link Object}
          * Исходный суперкласс всех остальных классов, каждый класс в java расширяет этот класс.
          * Один из основных методов класса Object - equals()
+         {@link BookHorstmann.Examples.Object.Equals.Equals}
          */
     }
 }
