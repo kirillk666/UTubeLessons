@@ -12,6 +12,7 @@ public class ArrayListExample {
         /** {@link ArrayList} - реализует(implements) интерфейс {@link List}, который в свою очередь реализует(implements) интерфейс {@link java.util.Collection};
          * Т.к. ArrayList реализует интерфейс List, то у него должны быть все методы List плюс (возможно) какие-то другие.
          * Отсюда внешняя схожесть. При этом в List эти методы вообще никак не реализованы и невозможно создать объект командой new List().
+         * {@link LessonsArab.Easy.Generics33.Generics}
         **/
 
         ArrayList<String> example1 = new ArrayList<>();
