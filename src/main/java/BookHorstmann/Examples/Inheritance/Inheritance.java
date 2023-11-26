@@ -3,6 +3,7 @@ package BookHorstmann.Examples.Inheritance;
 import BookHorstmann.Examples.Inheritance.Helpers.Employee;
 import BookHorstmann.Examples.Inheritance.Helpers.Manager;
 
+//5.0.0 page 201
 public class Inheritance {
     public static void main(String[] args) {
         Manager boss = new Manager("Carl", 80000.0, 1987, 12,15);

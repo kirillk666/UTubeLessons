@@ -7,7 +7,7 @@ jar -cvfe ResourceTest.jar ResourceTest *.class *.jpg *.txt
 
 */
 
-package BookHorstmann.ResourceTest;
+package BookHorstmann.Examples.ResourceTest;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
+//5.7.3 page 249
 public class ResourceTest {
     public static void main(String[] args) throws IOException {
         Class<ResourceTest> cl = ResourceTest.class;

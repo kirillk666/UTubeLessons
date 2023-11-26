@@ -4,6 +4,7 @@ import BookHorstmann.Examples.AbstractClasses.Helpers.Employee;
 import BookHorstmann.Examples.AbstractClasses.Helpers.Person;
 import BookHorstmann.Examples.AbstractClasses.Helpers.Student;
 
+//5.1.9 page 214
 public class AbstractClasses {
     public static void main(String[] args) {
         Person[] people = new Person[2];

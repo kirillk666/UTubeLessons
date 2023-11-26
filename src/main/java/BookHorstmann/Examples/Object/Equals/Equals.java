@@ -3,6 +3,7 @@ package BookHorstmann.Examples.Object.Equals;
 import BookHorstmann.Examples.Object.Equals.Helpers.Employee;
 import BookHorstmann.Examples.Object.Equals.Helpers.Manager;
 
+//5.2.2 page 227
 public class Equals {
     public static void main(String[] args) {
         Employee alice1 = new Employee("Alice Adams", 75000, 1987, 12, 15);
