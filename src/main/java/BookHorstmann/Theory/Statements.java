@@ -100,5 +100,11 @@ public class Statements {
          * Когда функция выполняется долго, нет смысла ожидать её завершения (визуально это будет выглядеть как зависший браузер, и пользователь закроет сайт).
            Поэтому ей передают callback, мол, сама сообщишь, когда закончишь работу.
          */
+
+        /** Лямбда-выражение
+         {@link LessonsArab.Normal.Lambda.WhatReplacesLambda}
+         {@link LessonsArab.Normal.Lambda.AnotherLambdaExample}
+
+         */
     }
 }
