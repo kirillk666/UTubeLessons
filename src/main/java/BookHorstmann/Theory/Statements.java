@@ -1,6 +1,8 @@
 package BookHorstmann.Theory;
 
 
+import BookHorstmann.Examples.MethodReference.java.MethodReferenceExample;
+
 public class Statements {
     public static void main(String[] args) {
         /** Статические методы не оперируют объектами
@@ -101,10 +103,29 @@ public class Statements {
            Поэтому ей передают callback, мол, сама сообщишь, когда закончишь работу.
          */
 
-        /** Лямбда-выражение
+        /** Лямбда-выражение (Lambda)
          {@link LessonsArab.Normal.Lambda.WhatReplacesLambda}
          {@link LessonsArab.Normal.Lambda.AnotherLambdaExample}
+         {@link BookHorstmann.Examples.Lambda.LambdaExamples}
+         */
 
+        /** Ссылка на метод (Method reference)
+         {@link MethodReferenceExample}
+         * Три типа ссылок:
+            1) Равнозначно лямбда выражению, параметры которого передаются методу
+                объект::методЭкземпляра  ==   объект -> методЭкземпляра(объект)
+                System.out::println      ==   x -> System.out.println(x)
+            2) Первый параметр ссылки на метод становится неявным параметром метода
+                Класс::методЭкземпляра        ==   (парам1, парам2) -> парам1.методЭкземпляра(парам2)
+                String::compareToIgnoreCase   ==   (x, y) -> x.compareToIgnoreCase(y)
+                String::trim                  ==   x -> x.trim()
+                String::concat                ==   (x, y) -> x.concat(y)
+            3) Все параметры передаются статическому методу
+                Класс::статическийМетод  ==  (парам1, парам2) -> статическийМетод(парам1, парам2)
+                Math::pow                ==  (x, y) -> Math.pow(x, y)
+         * Lambda можно превратить в Method reference, только если в теле Lambda вызывается единственный метод и
+           больше ничего не делается. Т.е. в примере s -> s.length() == 0 вызывается единственный метод, но кроме того,
+           в нем производится сравнение, поэтому нельзя превратить в Method reference.
          */
     }
 }
