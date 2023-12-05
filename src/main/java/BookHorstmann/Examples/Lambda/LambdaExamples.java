@@ -4,6 +4,7 @@ import java.awt.*;
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.function.IntConsumer;
 
 import javax.swing.*;
 
@@ -35,5 +36,20 @@ public class LambdaExamples {
         timer.start();
         JOptionPane.showMessageDialog(null, "Quit program?");
         System.exit(0);
+
+        //6.2.7 page 309 - таблица функциональных интерфейсов
+        //Пример, иллюстрирующий применение лямбды для выполнения какого-то действия несколько раз.
+        repeat(10, () -> System.out.println("Hello, World!"));
+
+        //Уведомить действие, на каком именно шаге оно должно произойти
+        repeat2(10, i -> System.out.println("Countdown: " + (9 - i)));
+    }
+
+    public static void repeat(int n, Runnable action) {
+        for (int i = 0; i < n; i++) action.run();
+    }
+
+    public static void repeat2(int n, IntConsumer action) {
+        for (int i = 0; i < n; i++) action.accept(i);
     }
 }
