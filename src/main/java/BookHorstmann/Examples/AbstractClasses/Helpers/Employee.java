@@ -6,8 +6,8 @@ public class Employee extends Person {
     private double salary;
     private LocalDate hireDay;
 
-    public Employee(String name, double salary, int year, int month, int day) {
-        super(name);
+    public Employee(String name, String surname, double salary, int year, int month, int day) {
+        super(name, surname);
         this.salary = salary;
         hireDay = LocalDate.of(year, month, day);
     }

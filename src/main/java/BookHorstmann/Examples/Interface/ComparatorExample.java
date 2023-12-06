@@ -6,7 +6,7 @@ import java.util.Comparator;
 //6.1.8 page 289
 public class ComparatorExample {
     public static void main(String[] args) {
-        var comparator = new ComparatorForStringsLength();
+        Comparator<String> comparator = new ComparatorForStringsLength();
         String first = "theFirst";
         String second = "second";
 

@@ -1,4 +1,4 @@
-package BookHorstmann.Examples.MethodReference.java.Helpers;
+package BookHorstmann.Examples.MethodReference.Helpers;
 
 import java.awt.event.ActionEvent;
 import java.time.Instant;

@@ -1,7 +1,7 @@
 package BookHorstmann.Theory;
 
 
-import BookHorstmann.Examples.MethodReference.java.MethodReferenceExample;
+import BookHorstmann.Examples.MethodReference.MethodReferenceExample;
 
 public class Statements {
     public static void main(String[] args) {
@@ -120,6 +120,7 @@ public class Statements {
 
         /** Ссылка на метод (Method reference)
          {@link MethodReferenceExample}
+         {@link BookHorstmann.Examples.Interface.ComparatorWithMethodReference}
          * Три типа ссылок:
             1) Равнозначно лямбда выражению, параметры которого передаются методу
                 объект::методЭкземпляра  ==   объект -> методЭкземпляра(объект)

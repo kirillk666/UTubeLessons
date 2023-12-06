@@ -1,4 +1,4 @@
-package BookHorstmann.Examples.MethodReference.java.Helpers;
+package BookHorstmann.Examples.MethodReference.Helpers;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

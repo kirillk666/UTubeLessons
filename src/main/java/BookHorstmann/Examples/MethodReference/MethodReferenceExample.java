@@ -1,4 +1,4 @@
-package BookHorstmann.Examples.MethodReference.java;
+package BookHorstmann.Examples.MethodReference;
 
 import java.util.Arrays;
 
