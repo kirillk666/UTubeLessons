@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) throws FileNotFoundException {
         // путь до файла
-        String pathToColorsText = "C:\\0.My\\JavaProjects\\YouTubeLessons\\src\\main\\java\\ReadFromFile\\text_colors";
+        String pathToColorsText = "C:\\0.My\\JavaProjects\\YouTubeLessons\\UTubeLessons\\src\\main\\java\\LessonsArab\\Easy\\ReadFromFile\\text_colors";
         File fileWithColors = new File(pathToColorsText);
 
         Scanner scanner = new Scanner(fileWithColors);
@@ -41,6 +41,14 @@ public class Test {
 
         System.out.println(Arrays.toString(numbersStr));
         System.out.println(Arrays.toString(numbers));
+
+        scanner.close();
+
+        //считать из файла набор символов, привести к виду "1 2 3"
+        File fileWithNumbersAndLetters = new File("text_numbers_letters");
+        Scanner scanner2 = new Scanner(fileWithNumbersAndLetters);
+        String lineKS = scanner2.nextLine();
+        System.out.println(lineKS.replaceAll("[^\\d\\s]", "").replaceAll("\\s+", " "));
 
         scanner.close();
     }
