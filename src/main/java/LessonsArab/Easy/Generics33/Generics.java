@@ -14,7 +14,7 @@ public class Generics {
         animals.add(333);
 
         String animalsStr = (String) animals.get(1);
-        /* Поскольку до появления generics list был не параметризован, то ArrayList мог возвращать только объекты Object.
+        /* Поскольку, до появления generics, list был не параметризован, то ArrayList мог возвращать только объекты Object.
         Чтобы вернуть строку, нужно было сделать down-casting
 
         Без параметризации в animals могут храниться объекты любого типа
@@ -29,7 +29,5 @@ public class Generics {
         animals2.add("frog");
 
         String animals2_Str = animals2.get(1);
-
-
     }
 }
