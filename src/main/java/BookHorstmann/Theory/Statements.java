@@ -86,6 +86,9 @@ public class Statements {
 
         /** Подстановочный тип (wildcards)
          * В подстановочном типе параметр типа может быть переменным.
+         * {@link BookHorstmann.Wildcards.WildcardsExample}
+         * Upper Bounded Wildcards
+         * Lower Bounded Wildcards
          */
 
         /** Оболочки/классы обертки int - Integer и тд

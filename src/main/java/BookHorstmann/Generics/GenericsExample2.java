@@ -1,8 +1,8 @@
 package BookHorstmann.Generics;
 
 import java.time.LocalDate;
-import java.util.Comparator;
 
+//8.4 page 401
 public class GenericsExample2 {
     public static void main(String[] args) {
         LocalDate[] birhdays = {
