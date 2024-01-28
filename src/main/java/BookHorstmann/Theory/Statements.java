@@ -185,8 +185,12 @@ public class Statements {
            Включается отдельно java -enableassertions MyApp
          */
         
-        /** Предикат
+        /** Предикат ({@link java.util.function.Predicate}
          *
+         */
+
+        /** {@link java.util.Collection}
+         * Для перебора элементов коллекции можно использовать for each (т.к. Collection extends Iterable) {@link LessonsArab.Normal.Collection.List.LinkedListExample}
          */
     }
 }

@@ -2,6 +2,7 @@ package LessonsArab.Normal.Collection.List;
 
 import LessonsArab.Helpers.Student;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class LinkedListExample {
@@ -19,7 +20,6 @@ public class LinkedListExample {
          В ArrayList:
          * При добавлении элемента с индексом 5 создается новый массив на 5 элементов и туда кладутся 4 других элемента, далее добавляется пятый
          * При удалении/добавлении элементов элементы сдвигаются, чем больше элементов, тем больше выполняется действий
-
          * Таким образом: если планируется работать с элементами коллекции, например, обращаться к ним .get(), то лучше использовать ArrayList, т.к. обращение
          к элементу происходит практически мгновенно, т.к. в основе лежит массив. В LinkedList же будет происходить проход по всем элементам коллекции, пока не дойдем до нужного элемента.
          Это может занимать много времени.
@@ -35,7 +35,17 @@ public class LinkedListExample {
         studentsLinkedList.add(studentKirill);
         studentsLinkedList.add(studentKatya);
         studentsLinkedList.add(studentDesdemona);
+        System.out.println(studentsLinkedList + "\n");
 
-        System.out.println(studentsLinkedList);
+        studentsLinkedList.removeIf(student -> student.getAge() < 25);
+        System.out.println(studentsLinkedList + "\n");
+
+        studentsLinkedList.forEach(student -> student.setAge(25));
+        System.out.println(studentsLinkedList + "\n");
+
+        for(Student student : studentsLinkedList) {
+            student.setAge(666);
+        }
+        System.out.println(studentsLinkedList + "\n");
     }
 }
