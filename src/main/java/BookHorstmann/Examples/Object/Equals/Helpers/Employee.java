@@ -1,9 +1,11 @@
 package BookHorstmann.Examples.Object.Equals.Helpers;
 
+import LessonsArab.Helpers.Worker;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
     private String name;
     private double salary;
     private LocalDate hireDay;
@@ -63,6 +65,11 @@ public class Employee {
                 ", salary=" + salary +
                 ", hireDay=" + hireDay +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.name.compareTo(o.name);
     }
 }
 

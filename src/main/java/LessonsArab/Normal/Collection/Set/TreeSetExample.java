@@ -10,12 +10,13 @@ public class TreeSetExample {
         /** {@link TreeSet} - смесь {@link java.util.HashSet} и {@link java.util.TreeMap}
          * В основе TreeSet, как и в HashSet, лежит TreeMap<E,Object>, где Object - какая-то константа-заглушка,
          которую TreeSet полностью игнорирует и никогда не использует. Объект <E> - ключ в TreeSet;
-         * Элементы хранятся в отсортированном виде в порядке возрастания Key;
+         * Элементы хранятся в отсортированном виде в порядке возрастания Key, из-за этого вставка элемента в коллекцию ниже по скорости выполнения,
+           чем у HashSet, но намного быстрее, чем в выбранное место массива или linked list;
          * Key должны быть уникальны;
          * !!! Для TreeSet, как и для TreeMap, не нужно переопределять методы equals и hashCode, т.к. все сравнения идут основываясь на метод
          compareTo для Key, но все равно рекомендуется переопределять;
-         * В основе TreeSet лежит Red Black Tree, как и в TreeMap;
          * null нельзя хранить, аналогично TreeMap, где Key не может быть null;
+         * В основе TreeSet лежит Red Black Tree, как и в TreeMap;
          */
 
         TreeSet<Integer> integerTreeSet = new TreeSet<>();
