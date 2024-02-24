@@ -1,4 +1,4 @@
-package BookHorstmann.Theory;
+package Theory;
 
 
 import BookHorstmann.Examples.MethodReference.MethodReferenceExample;
