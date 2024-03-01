@@ -3,7 +3,7 @@ package Theory;
 
 import BookHorstmann.Examples.MethodReference.MethodReferenceExample;
 
-public class Statements {
+public class StatementsJava {
     public static void main(String[] args) {
         /** Статические методы не оперируют объектами
             int n = Employee.getNext(id); */
