@@ -192,5 +192,12 @@ public class StatementsJava {
         /** {@link java.util.Collection}
          * Для перебора элементов коллекции можно использовать for each (т.к. Collection extends Iterable) {@link LessonsArab.Normal.Collection.List.LinkedListExample}
          */
+
+        /**
+         * Patterns
+         * Factory - создание разных объектов через класс фабрики {@link RandomTasks.FactoryPattern.CoffeeFactory}
+         * Singleton - одиночка. {@link RandomTasks.SingletonPattern.Earth}
+           Гарантирует, что у класса есть только один объект (один экземпляр класса) и к этому объекту предоставляется глобальная точка доступа.
+         */
     }
 }
