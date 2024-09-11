@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StreamMethod2Filter {
+public class StreamMethod9Filter {
     public static void main(String[] args) {
 
         /**
          * stream().filter()
-         * Методы stream, map и т.д. не меняют массив или коллекцию, на которой они были вызваны.
+         * Все методы stream не меняют массив или коллекцию, на которой они были вызваны.
          */
 
         Student Kirill = new Student("Kirill", 'M', 28, 4.23);
@@ -28,7 +28,8 @@ public class StreamMethod2Filter {
         students.add(Arina);
 
         List<Student> studentsFiltered;
-        studentsFiltered = students.stream().filter(student -> student.getAge() >= 22 && student.getAverageGrade() > 4.00).collect(Collectors.toList());
+        studentsFiltered = students.stream().filter(student -> student.getAge() >= 22 && student.getAverageGrade() > 4.00)
+                .collect(Collectors.toList());
         System.out.println(studentsFiltered);
 
         studentsFiltered.removeAll(students);

@@ -11,6 +11,7 @@ public class StreamMethod4Reduce {
 
         /**
          * stream().reduce()
+         * Все методы stream не меняют массив или коллекцию, на которой они были вызваны.
          */
 
         //Если делать так, то лист будет unmodifiableList

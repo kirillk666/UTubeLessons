@@ -4,6 +4,7 @@ import LessonsArab.Helpers.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class StreamMethodsChaining {
@@ -12,9 +13,9 @@ public class StreamMethodsChaining {
         /*
         Объединение методов цепочки вызовов.
         Intermediate(Lazy) - промежуточные, получают на вход поток и возвращают поток. Можно добавлять через точку и выстраивать цепочку
-            .map(), .filter(), sorted()
+            .map(), .filter(), sorted(), distinct(), peek(), flatMap()
         Terminal methods(Eager) - конечные, возвращают либо void, либо какое-то значение.
-            .reduce(), forEach()
+            .reduce(), forEach(), collect()
          */
 
         int[] intArray = {3, 8, 1, 5, 9, 12, 4, 21, 81, 7, 18};
@@ -50,12 +51,9 @@ public class StreamMethodsChaining {
         students.add(Arina);
         System.out.println(students);
 
-        students.stream().map(element -> {
-                    element.setName(element.getName().toUpperCase());
-                    return element;
-                })
+        students.stream().peek(element -> element.setName(element.getName().toUpperCase()))
                 .filter(element -> element.getSex() == 'F')
-                .sorted((x, y) -> x.getAge() - y.getAge())
-                .forEach(element -> System.out.println(element));
+                .sorted(Comparator.comparingInt(Student::getAge))
+                .forEach(System.out::println);
     }
 }

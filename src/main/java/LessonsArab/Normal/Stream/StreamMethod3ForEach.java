@@ -46,12 +46,16 @@ public class StreamMethod3ForEach {
         Stream<Student> studentStream = Stream.of(Kirill, Katya, Desdemona, Gena, Arina);
 
         //Поскольку тут не создаем объект, который наследует интерфейс List, то данные кладем в unmodifiableList (см. StreamMethodReduce.java)
-        List<Student> studentList = studentStream.filter(student -> student.getSex().equals('F')).toList();
+        List<Student> studentList = studentStream
+                .filter(student -> student.getSex().equals('F')).toList();
+
         System.out.println(studentList);
         System.out.println("_________________________________________________________________________________________");
 
         //То же самое, но без создания объекта класса Stream
-        List<Student> studentList2 = Stream.of(Kirill, Katya, Desdemona, Gena, Arina).filter(student -> student.getSex().equals('F')).toList();
+        List<Student> studentList2 = Stream.of(Kirill, Katya, Desdemona, Gena, Arina)
+                .filter(student -> student.getSex().equals('F')).toList();
+
         System.out.println(studentList2);
         System.out.println("_________________________________________________________________________________________");
     }
