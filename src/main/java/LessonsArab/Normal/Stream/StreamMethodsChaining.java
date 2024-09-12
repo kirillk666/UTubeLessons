@@ -13,9 +13,9 @@ public class StreamMethodsChaining {
         /*
         Объединение методов цепочки вызовов.
         Intermediate(Lazy) - промежуточные, получают на вход поток и возвращают поток. Можно добавлять через точку и выстраивать цепочку
-            .map(), .filter(), sorted(), distinct(), peek(), flatMap()
+            .map(), .filter(), sorted(), distinct(), peek(), flatMap(), .min(), .max(), .skip(), .mapToInt()
         Terminal methods(Eager) - конечные, возвращают либо void, либо какое-то значение.
-            .reduce(), forEach(), collect()
+            .reduce(), forEach(), collect(), findFirst()
          */
 
         int[] intArray = {3, 8, 1, 5, 9, 12, 4, 21, 81, 7, 18};

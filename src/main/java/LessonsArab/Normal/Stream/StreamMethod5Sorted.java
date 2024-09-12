@@ -38,7 +38,7 @@ public class StreamMethod5Sorted {
         System.out.println("Sorted by comparator in class: + " + students);
 
         //Либо можно прописать сортировку в лямбде
-        students = students.stream().sorted((x,y) -> x.getAge().compareTo(y.getAge())).collect(Collectors.toList());
+        students = students.stream().sorted((x, y) -> x.getAge().compareTo(y.getAge())).collect(Collectors.toList());
         System.out.println("Sorted by comparator in lambda: + " + students);
     }
 }

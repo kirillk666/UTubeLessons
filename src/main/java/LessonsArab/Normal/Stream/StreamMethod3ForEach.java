@@ -17,7 +17,8 @@ public class StreamMethod3ForEach {
         int[] array = {3, 5, 6, 7, 9};
         Arrays.stream(array).forEach(element -> {
             element *= 2;
-            System.out.println(element);});
+            System.out.println(element);
+        });
         System.out.println("_________________________________________________________________________________________");
 
         Arrays.stream(array).forEach(element -> System.out.println(element));
