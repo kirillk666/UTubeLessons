@@ -1,4 +1,4 @@
-package LessonsArab.Normal.MultyThreading.WhyNotRunUsingMethodRun;
+package LessonsArab.Normal.MultiThreading.WhyNotRunUsingMethodRun;
 
 public class StartExample implements Runnable {
     @Override

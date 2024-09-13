@@ -1,6 +1,6 @@
-package LessonsArab.Normal.MultyThreading.Methods;
+package LessonsArab.Normal.MultiThreading.Methods;
 
-public class Methods {
+public class Method1NameProperty {
     public static void main(String[] args) {
         Thread thread = new Thread(() -> System.out.println("anonymous"));
         System.out.println("Name of thread: " + thread.getName()

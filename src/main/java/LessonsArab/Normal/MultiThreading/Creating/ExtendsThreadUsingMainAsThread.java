@@ -1,4 +1,4 @@
-package LessonsArab.Normal.MultyThreading.Creating;
+package LessonsArab.Normal.MultiThreading.Creating;
 
 //В данном примере мы никак не контролируем последовательность выполнения потоков. Они не синхронизованы.
 

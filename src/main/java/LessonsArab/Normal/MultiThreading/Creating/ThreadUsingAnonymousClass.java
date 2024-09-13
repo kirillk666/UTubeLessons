@@ -1,4 +1,4 @@
-package LessonsArab.Normal.MultyThreading.Creating;
+package LessonsArab.Normal.MultiThreading.Creating;
 
 public class ThreadUsingAnonymousClass {
     public static void main(String[] args) {
