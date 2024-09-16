@@ -212,14 +212,14 @@ public class StatementsJava {
          */
 
         /**
-         volatile - {@link LessonsArab.Normal.MultiThreading.Sync.Volatile}
+         volatile - {@link LessonsArab.Normal.MultiThreading.userThreads.Sync.Volatile}
          * Используется для пометки переменной, хранящейся только в основной памяти (ее не будет в кешах потоков).
          * Для синхронизации значения переменной между потоками volatile используется когда только один поток может
                 изменять значение переменной, а остальные потоки - только читать.
          */
 
         /**
-         * {@link LessonsArab.Normal.MultiThreading.Sync.DataRace} + synchronized methods
+         * {@link LessonsArab.Normal.MultiThreading.userThreads.Sync.DataRace} + synchronized methods
          * Монитор - механизм для достижения корректной работы при синхронизации (свободен/занят).
                 У каждого класса или объекта есть монитор.
          */

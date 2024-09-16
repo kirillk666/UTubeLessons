@@ -1,4 +1,4 @@
-package LessonsArab.Normal.MultiThreading.Methods;
+package LessonsArab.Normal.MultiThreading.userThreads.Methods;
 
 public class Method2Sleep {
     public static void main(String[] args) {

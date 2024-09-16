@@ -1,4 +1,4 @@
-package LessonsArab.Normal.MultiThreading.Sync;
+package LessonsArab.Normal.MultiThreading.userThreads.Sync;
 
 import lombok.SneakyThrows;
 
