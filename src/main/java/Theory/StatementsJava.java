@@ -64,7 +64,7 @@ public class StatementsJava {
          */
 
         /** Generics (обобщение, параметризация) <String>
-         * {@link LessonsArab.Easy.Generics33.Generics}
+         * {@link LessonsUtube.Easy.Generics33.Generics}
          * Экземпляр обобщенного типа получается в р-те подстановки имени типа вместо переменной типа <T>, т.е.
            обобщенный класс действует как фабрика обычных классов, см. {@link BookHorstmann.Generics.GenericsExample}.
          * В именах переменных принято применять:
@@ -128,8 +128,8 @@ public class StatementsJava {
          */
 
         /** Лямбда-выражение (Lambda)
-         {@link LessonsArab.Normal.Lambda.WhatReplacesLambda}
-         {@link LessonsArab.Normal.Lambda.AnotherLambdaExample}
+         {@link LessonsUtube.Normal.Lambda.WhatReplacesLambda}
+         {@link LessonsUtube.Normal.Lambda.AnotherLambdaExample}
          {@link BookHorstmann.Examples.Lambda.LambdaExamples}
          * Позволяет использовать функциональное программирование, в то время как java - ООП.
          * Позволяет использовать метод в кач-ве параметра.
@@ -190,7 +190,7 @@ public class StatementsJava {
          */
 
         /** {@link java.util.Collection}
-         * Для перебора элементов коллекции можно использовать for each (т.к. Collection extends Iterable) {@link LessonsArab.Normal.Collection.List.LinkedListExample}
+         * Для перебора элементов коллекции можно использовать for each (т.к. Collection extends Iterable) {@link LessonsUtube.Normal.Collection.List.LinkedListExample}
          */
 
         /**
@@ -212,14 +212,14 @@ public class StatementsJava {
          */
 
         /**
-         volatile - {@link LessonsArab.Normal.MultiThreading.userThreads.Sync.Volatile}
+         volatile - {@link LessonsUtube.Normal.MultiThreading.userThreads.Sync.Volatile}
          * Используется для пометки переменной, хранящейся только в основной памяти (ее не будет в кешах потоков).
          * Для синхронизации значения переменной между потоками volatile используется когда только один поток может
                 изменять значение переменной, а остальные потоки - только читать.
          */
 
         /**
-         * {@link LessonsArab.Normal.MultiThreading.userThreads.Sync.DataRace} + synchronized methods
+         * {@link LessonsUtube.Normal.MultiThreading.userThreads.Sync.DataRace} + synchronized methods
          * Монитор - механизм для достижения корректной работы при синхронизации (свободен/занят).
                 У каждого класса или объекта есть монитор.
          */

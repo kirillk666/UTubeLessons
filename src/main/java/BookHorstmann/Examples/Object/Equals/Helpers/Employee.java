@@ -1,7 +1,5 @@
 package BookHorstmann.Examples.Object.Equals.Helpers;
 
-import LessonsArab.Helpers.Worker;
-
 import java.time.LocalDate;
 import java.util.Objects;
 
