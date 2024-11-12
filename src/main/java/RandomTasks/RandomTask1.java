@@ -10,8 +10,8 @@ public class RandomTask1 {
         String leftArrow = "<--<<";
 
         Random rn = new Random();
-        while(arrows.length() < 106) {
-            int randomNum = rn.nextInt((arrows.length() -1) - 1 + 1) + 1;
+        while (arrows.length() < 106) {
+            int randomNum = rn.nextInt((arrows.length() - 1) - 1 + 1) + 1;
             arrows.append(arrows.charAt(randomNum));
         }
         System.out.println("arrows.lenght = " + arrows.length() + "\narrows: " + arrows);
@@ -20,7 +20,7 @@ public class RandomTask1 {
         int indexOfRightArrow = arrows.indexOf(rightArrow);
 
 
-        while(indexOfRightArrow + rightArrow.length() <= arrows.length() && indexOfRightArrow >= 0) {
+        while (indexOfRightArrow + rightArrow.length() <= arrows.length() && indexOfRightArrow >= 0) {
             indexOfRightArrow = arrows.indexOf(rightArrow, indexOfRightArrow + 1);
             amount++;
         }
@@ -30,12 +30,12 @@ public class RandomTask1 {
         int indexOfRightArrow2 = 0;
 
         while (indexOfRightArrow2 >= 0) {
-            if(indexOfRightArrow2 <= arrows.length()) {
-            indexOfRightArrow2 = arrows.indexOf(rightArrow);
-            StringBuilder ex2 = arrows.delete(indexOfRightArrow2, indexOfRightArrow2 + rightArrow.length());
-            amount2++;
+            if (indexOfRightArrow2 <= arrows.length()) {
+                indexOfRightArrow2 = arrows.indexOf(rightArrow);
+                StringBuilder ex2 = arrows.delete(indexOfRightArrow2, indexOfRightArrow2 + rightArrow.length());
+                amount2++;
+            }
+            System.out.println("Total rightArrows= " + amount2);
         }
-        System.out.println("Total rightArrows= " + amount2);
     }
 }
-    }
