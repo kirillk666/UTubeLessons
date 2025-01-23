@@ -7,7 +7,7 @@ public class SemaphoreEx {
     позволяющий ограничить доступ к какому-то ресурсу.
     В конструктор Semaphore нужно передавать кол-во потоков, которым Semaphore будет разрешать одновременно использовать этот ресурс.
 
-    Если в Semaphore передан 1 поток, то будет то же самое, что и Reentrant lock.
+    Если в Semaphore передан 1 поток, то будет работать как Reentrant lock.
      */
     public static void main(String[] args) {
         Semaphore callBox = new Semaphore(2);
