@@ -9,6 +9,7 @@ public class SynchronizedListExample {
     public static void main(String[] args) throws InterruptedException {
 
         /** SynchronizedCollections - получаются из традиционных коллекций путем их обертывания.
+         * Т.е. Collections.synchronized*AnyCollection*(new anyCollection)
          * Используются локи для всех методов, т.е. один поток начинает работать с коллекцией и ставит лок до тех пор, пока не закончит.
          * Из-за локов страдает производительность.
          */
